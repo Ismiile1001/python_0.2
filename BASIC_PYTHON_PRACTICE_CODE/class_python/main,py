@@ -1,0 +1,330 @@
+# while True:
+#     password = input("Enter a password: ")
+#     if (len(password) >= 8 and 
+#         any(char.isupper() for char in password) and 
+#         any(char.islower() for char in password) and 
+#         any(char.isdigit() for char in password)):
+#         print("Password accepted.")
+#         break
+#     else:
+#         print("Invalid password. Please try again.")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# # Loop through numbers 1 to 50
+# for num in range(1, 51):
+#     # Check if the number is divisible by 3 or 5
+#     if num % 3 == 0 or num % 5 == 0:
+#         print(num)  # Print the number if it meets the condition
+
+
+
+
+
+
+
+# total_sum = 0  # Initialize a variable to store the sum of positive numbers
+
+# while True:
+#     number = float(input("Enter a positive number (negative to stop): "))  # Get input from user
+#     if number < 0:
+#         break  # Exit loop if the number is negative
+#     total_sum += number  # Add the positive number to the sum
+
+# print("Total sum of positive numbers:", total_sum)  # Display the sum of positive numbers
+
+
+
+
+
+
+## Continuously ask for words
+# while True:
+#     word = input("Enter a word: ")  # Get word input from user
+#     if len(word) < 3:
+#         continue  # Skip words that are less than 3 characters
+#     if word == word[::-1]:  # Check if the word is the same forwards and backwards
+#         print(f"{word} is a palindrome.")  # It's a palindrome
+#     else:
+#         print(f"{word} is not a palindrome.")  # It's not a palindrome
+
+
+
+
+# vowels = 'aeiouAEIOU'  # List of vowels (both uppercase and lowercase)
+# count = 0  # Initialize vowel counter
+# text = input("Enter a string: ")  # Get string input from the user
+
+# # Loop through each character in the string
+# for char in text:
+#     if char in vowels:
+#         count += 1  # Increase count if the character is a vowel
+
+# print("Number of vowels:", count)  # Display the total number of vowels
+
+
+
+
+
+
+
+
+
+# text = input("Enter a string: ")  # Get string input from user
+# seen = set()  # Initialize an empty set to keep track of seen characters
+
+# # Loop through each character in the string
+# for char in text:
+#     if char in seen:
+#         print("The string does not have all unique characters.")  # Duplicate found
+#         break  # Exit the loop as we've found a duplicate
+#     seen.add(char)  # Add character to the set if it's unique
+# else:
+#     print("The string has all unique characters.")  # No duplicates found
+
+
+
+
+
+
+# student_info = {}  # Initialize an empty dictionary to store student info
+
+# # Continuously ask for student information  
+# while True:
+#     field = input("Enter the field to submit (name/age/course) or 'exit' to stop: ")  # Ask what info to submit
+#     if field == "exit":
+#         break  # Exit the loop when done
+
+#     if field == "age":
+#         value = float(input("Enter age (as float): "))  # Get age as a float number
+#     else:
+#         value = input(f"Enter {field} (max 5 characters): ")[:5]  # Limit other fields to 5 characters
+
+#     student_info[field] = value  # Store the information in the dictionary
+
+# print("Student Info Submitted:", student_info)  # Display all student information
+
+
+
+
+
+
+
+
+
+
+# bucket = []  # Initialize an empty list to represent the shopping bucket
+
+# # Continuously allow adding/removing items or viewing the list
+# while True:
+#     action = input("Do you want to add/remove/view items or 'exit'?: ").lower()  # Get action from the user
+#     if action == 'exit':
+#         break  # Exit the loop if user types 'exit'
+
+#     if action == 'add':
+#         item = input("Enter item to add: ")  # Get item name to add
+#         bucket.append(item)  # Add item to the bucket
+
+#     elif action == 'remove':
+#         item = input("Enter item to remove: ")  # Get item name to remove
+#         if item in bucket:
+#             bucket.remove(item)  # Remove the item if it exists
+#         else:
+#             print(f"{item} not found in bucket.")
+
+#     elif action == 'view':
+#         print("Items in bucket:", bucket)  # Show all items in the bucket
+
+
+
+
+
+
+
+
+
+n = int(input("Enter number of strings: "))  # Get the number of strings from the user
+strings = input("Enter the strings: ").split()[:n]  # Get 'n' strings from the user
+unique_chars = set(''.join(strings))  # Join all strings and extract unique characters
+print(sorted(unique_chars))  # Print the unique characters in lexicographical order
+
+
+
+# Price lists for each product across 4 markets
+# products = {
+#     "Rice": [45, 42, 41, 40],
+#     "Salt": [34, 35, 36, 36],
+#     "Fish": [200, 202, 201, 205],
+#     "Orange": [100, 99, 101, 102]
+# }
+
+# # Get the product name from the user
+# product_name = input("Enter the product name: ").capitalize()
+
+# # Check if the product exists in the price list
+# if product_name in products:
+#     # Find the minimum price for the product
+#     min_price = min(products[product_name])
+    
+#     # Find which market offers the minimum price
+#     market_index = products[product_name].index(min_price) + 1
+    
+#     # Display the result
+#     print(f"{product_name} is cheapest in market {market_index} at a price of {min_price}.")
+# else:
+#     print("Product not found. Please enter a valid product name.")
+
+
+
+
+
+
+
+# n = int(input("Enter number of students: "))  # Get the number of students
+# students = input("Enter student names: ").split()[:n]  # Get 'n' student names
+
+# emails = []  # Initialize an empty list to store generated emails
+
+# # Loop through each student's name
+# for student in students:
+#     if len(student) > 20:
+#         continue  # Ignore names longer than 20 characters
+
+#     # Generate email as lowercase name + length of name + ASCII value of first letter
+#     email = student.lower() + "_" + str(len(student)) + "_" + str(ord(student[2]))
+#     emails.append(email)  # Add generated email to the list
+
+# print(emails)  # Print the list of generated emails
+
+
+
+
+
+
+
+
+
+
+# tasks = {}  # Store tasks with their status
+
+# while True:
+#     action = input("Choose: 'add', 'complete', 'view', or 'exit': ").lower()  # Get user input
+  
+#     if action == 'exit':
+#         break  # Exit the loop if 'exit' is chosen
+
+#     elif action == 'add':
+#         task = input("Enter task: ")  # Add a new task
+#         tasks[task] = False  # Set task as incomplete
+
+#     elif action == 'complete':
+#         task = input("Task to complete: ")  # Mark a task as complete
+#         if task in tasks:
+#             tasks[task] = True  # Mark task as completed
+
+#     elif action == 'view':
+#         for task, status in tasks.items():  # Display all tasks
+#             print(f"{task}: {'Complete' if status else 'Incomplete'}")
+
+
+
+# m = int(input("Enter size of the string: "))
+# s = input("Enter string: ")
+# n = int(input("Number of characters to rotate: "))
+# rotated = s[n:] + s[:n]
+# print("Rotated string:", rotated) 
+
+
+
+# employees = input("Enter employee names: ").split()  # Get employee names and split them into a list
+# numerical_values = []  # Initialize an empty list to store numerical values
+
+
+# total = 0  # Initialize total for each employee
+
+# # Loop through each employee name
+# for employee in employees:
+#     for c in employee:
+#         total += ord(c)  # Add ASCII value of each character to the total
+#     numerical_values.append(total)  # Add the total to the list of numerical values
+
+# print("Numerical Values:", numerical_values)  # Print the result
+
+
+
+
+
+
+
+# def generate_password(s):
+#     if len(s) == 10:
+#         return s[:3].upper() + s[-3:].lower() + '!@#$'
+# s = input("Enter the string to generate password: ")
+# print(generate_password(s))
+
+
+
+# def generate_password(s):
+#     if len(s) == 10:
+#        return s[ :3].upper()+ '!@#$' + s[-3:].lower()
+    
+
+# s = input("Enter the string to generate :") 
+# print(generate_password(s))   
+
+
+
+# x = [3, 4, 5, 7, 8, 10, "dghf", "cbxgc", 3.5, 6.2]
+# even_sum = sum(i for i in x if isinstance(i, (int, float)) and i % 2 == 0)
+# print("Sum of even numbers:", even_sum)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

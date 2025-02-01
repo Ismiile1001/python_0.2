@@ -1,0 +1,4 @@
+ int(input("Enter number of strings: "))  # Get the number of strings from the user
+strings = input("Enter the strings: ").split()[:n]  # Get 'n' strings from the user
+unique_chars = set(''.join(strings))  # Join all strings and extract unique characters
+print(sorted(unique_chars))  # Print the unique characters in lexicographical order
